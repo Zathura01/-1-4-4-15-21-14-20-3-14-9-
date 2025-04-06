@@ -1,0 +1,351 @@
+body{
+    font-family: "Alice";
+    font-stretch: semi-expanded;
+    font-variant: small-caps;
+    font-weight: lighter;
+    font-size:large;
+    }  
+
+    *{
+        font-family: "Alice";
+        font-stretch: semi-expanded;
+        font-variant: small-caps;
+        font-weight: lighter;
+        font-size:large;
+      }
+
+.login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+    height: 80vh; 
+    padding-top: 25px;
+    background-color: rgb(142, 142, 207);
+}
+
+.icon {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    margin-left: -200px;
+}
+
+.formClass {
+    margin: 10px 10px;
+}
+
+input {
+    margin: 10px;
+    width: 200px;
+    height: 25px;
+    padding: 4px;
+}
+
+button {
+    min-width: 100px;
+    height: 30px;
+    background-color: black;
+    color: white;
+    box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.4), -4px -4px 5px rgba(255, 255, 255, 0.2);
+    margin: 5px;
+}
+
+.longbuttons {
+    min-width: 210px;
+    height: 30px;
+    background-color: black;
+    color: white;
+    box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.4), -4px -4px 5px rgba(255, 255, 255, 0.2);
+    margin: 5px;
+}
+
+.eye {
+    width: 10px;
+    height: 10px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.Home {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    width:99vw;
+    height: 100vh;
+}
+
+.budget {
+  flex: 0.5;
+  padding: 0.5rem;
+  font-size: 0.75rem;
+  background-image: url('https://www.transparenttextures.com/patterns/wood-pattern.png');
+  background-repeat: repeat;
+  background-size: auto;
+  color: #fff;
+  max-height: 90%;
+  overflow-y: scroll;
+}
+
+.budget-card {
+  background-image: url('https://www.transparenttextures.com/patterns/wood-pattern.png');
+  background-color: transparent;
+  background-repeat: repeat;
+  border-radius: 8px;
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+  box-shadow: none; /* Cleaner, more minimalist */
+  color: #fff; /* Optional: again if dark bg */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* subtle border if needed */
+}
+
+.budget-card * {
+  background-color: transparent !important;
+  font-size: 0.75rem;
+  margin: 0.2rem 0;
+  color: #e0e0e0; /* Optional: softer white text */
+  line-height: 1.2;
+}
+
+
+
+.mid {
+    flex: 4;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    gap: 10px;
+    background-color: blue;
+    height: 99vh;
+}
+
+.top {
+    display: flex;
+    flex-direction: row;
+    border: 2px solid black;
+    width: 100%;
+    align-items: stretch;
+}
+
+.today {
+    flex: 1;
+    display: flex;
+    padding: 10px;
+    width: 30%;
+    height: 25vh;
+    border: 2px solid black;
+}
+
+.stats {
+    width: 70%;
+    flex: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f8f9fa;
+}
+
+.bottom {
+    display: flex;
+    flex-direction: row;
+    border: 2px solid black;
+    width: 100%;
+    align-items: stretch;
+    height: 80vh;
+}
+
+.tools {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items:flex-start;
+    background: #0f9f3d;
+    max-height: 500px;
+    overflow-y: scroll;
+}
+
+.calendar {
+    flex: 2;
+    display: flex;
+    background: #f0f0f0;
+    border: 20px black solid;
+}
+
+
+/* Modal Overlay */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    animation: fadeIn 0.3s forwards;
+  }
+  
+  /* Modal Content Box */
+  .modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 350px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transform: scale(0.8);
+    animation: zoomIn 0.3s forwards;
+  }
+  
+  /* Form Styling */
+  .budget-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 15px;
+  }
+
+  /* Label Styling */
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  /* Select Styling */
+  .select-container {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+  }
+  
+  select {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  /* Close Button */
+  .close-btn {
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+  }
+  
+  .close-btn:hover {
+    background-color: #c9302c;
+  }
+  
+  /* Fade-in animation */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  /* Zoom-in animation */
+  @keyframes zoomIn {
+    from { transform: scale(0.8); }
+    to { transform: scale(1); }
+  }
+  
+/* Main Grid Layout */
+.grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    justify-content: flex-start;
+  }
+  
+  /* Table Wrapper */
+  .table-wrapper {
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: fit-content;
+  }
+  
+  /* Table Styling */
+  .table-container {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  /* Table Headers */
+  .th-container {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid black;
+  }
+  
+  /* Table Cells */
+  .td-container {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  /* Select & Input Fields */
+    input {
+    width: 80%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  select{
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  /* Focus Effect on Input Fields */
+  input:focus, select:focus {
+    outline: none;
+    border-color: #007bff;
+    background-color: #f0f8ff;
+  }
+
+  .addButton, .removeButton{
+    width: 20px;
+    margin-left: 10px;
+    display: flex;
+    align-items: flex-end;
+}
+  
+
+.addButton, .removeButton {
+    cursor: pointer;
+    transition: transform 0.2s;
+    margin: 0 5px;
+  }
+  
+  .addButton {
+    color: #007bff;
+  }
+  
+  .removeButton {
+    color: #d9534f;
+  }
+  
+  .addButton:hover, .removeButton:hover {
+    transform: scale(1.2);
+  }
